@@ -1,0 +1,14 @@
+{
+	"name": "bank",
+	"version": "1.0.0",
+	"description": "bank landing page",
+	"main": "radhe.js",
+	"license": "MIT",
+	"devDependencies": {
+		"tailwindcss": "^3.2.4"
+	},
+	"scripts": {
+		"tailwind:w": "tailwindcss -i ./input.css -o ./styles/output.css --watch",
+		"tailwind:build": "tailwindcss -i ./input.css -o ./styles/output.css"
+	}
+}
