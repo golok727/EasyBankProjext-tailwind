@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	.btn-primary {
+		@apply text-white text-[.6rem] font-semibold py-2 px-3 rounded-full bg-gradient-to-br from-primaryLimeGreen to-primaryBrightCyan;
+	}
+	.bg-intro-mobile {
+		background-image: url("../assets/images/bg-intro-mobile.svg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

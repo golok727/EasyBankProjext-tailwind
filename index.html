@@ -12,7 +12,84 @@
 		<link rel="stylesheet" href="./styles/output.css" />
 		<title>easy-bank</title>
 	</head>
-	<body>
+	<body class="font-publicSans overflow-x-hidden relative">
 		<!-- <h2 class="font-bold text-red-500 text-3xl">Radhey Shyam</h2> -->
+		<div class="z-10 fixed top-0 w-full bg-white shadow-sm">
+			<nav class="realtive container mx-auto p-3">
+				<!-- Flex container -->
+				<div class="w-full flex item-center justify-between items-center">
+					<!-- Logo -->
+					<div>
+						<img src="assets/images/logo.svg" alt="" srcset="" />
+					</div>
+					<!-- Nav Links -->
+					<ul class="hidden md:flex gap-5 text-[.8rem] text-grayishBlue">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Careers</a></li>
+					</ul>
+					<button class="btn-primary">Request Invite</button>
+				</div>
+			</nav>
+		</div>
+		<!-- Navbar End -->
+		<!-- Floating -->
+		<div class="w-[600px] absolute -right-32 -top-12">
+			<img
+				class="object-contain md:block hidden"
+				src="assets/images/bg-intro-desktop.svg"
+				alt=""
+				srcset=""
+			/>
+		</div>
+		<div class="w-[400px] absolute -right-12 top-0">
+			<img
+				class="object-contain md:block hidden"
+				src="assets/images/image-mockups.png"
+				alt=""
+				srcset=""
+			/>
+		</div>
+		<!-- mokeup -->
+		<div class="bg-intro-mobile bg-cover md:hidden flex justify-center">
+			<div class="w-60">
+				<img
+					class="object-contain"
+					src="assets/images/image-mockups.png"
+					alt=""
+				/>
+			</div>
+		</div>
+		<!-- MainSection -->
+		<section
+			class="h-[400px] md:flex-row flex-col flex justify-start items-center container mx-auto md:py-4"
+		>
+			<!--  -->
+			<div class="">
+				<h1 class="text-2xl">
+					Next generation <br />
+					digital banking
+				</h1>
+				<div class="max-w-[45ch] py-4 text-grayishBlue text-sm">
+					<p>
+						Take your financial life online. Your Easybank account will be a
+						one-stop-shop for spending, saving, budgeting, investing, and much
+						more.
+					</p>
+				</div>
+				<button class="btn-primary">Request Invite</button>
+			</div>
+
+			<!-- <div class="absolute -right-16">
+				<img
+					class="md:block hidden"
+					src="assets/images/bg-intro-desktop.svg"
+					alt=""
+					srcset=""
+				/>
+			</div> -->
+		</section>
 	</body>
 </html>
