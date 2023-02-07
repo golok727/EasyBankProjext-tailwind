@@ -10,12 +10,15 @@
 			type="image/x-icon"
 		/>
 		<link rel="stylesheet" href="./styles/output.css" />
+		<script src="radhe.js" defer></script>
 		<title>easy-bank</title>
 	</head>
 	<body class="font-publicSans overflow-x-hidden relative">
 		<!-- <h2 class="font-bold text-red-500 text-3xl">Radhey Shyam</h2> -->
 		<div class="z-10 fixed top-0 w-full bg-white shadow-sm">
-			<nav class="realtive container mx-auto p-3">
+			<nav
+				class="realtive container mx-auto p-3 transition-all duration-150 ease-linear"
+			>
 				<!-- Flex container -->
 				<div class="w-full flex item-center justify-between items-center">
 					<!-- Logo -->
@@ -24,15 +27,65 @@
 					</div>
 					<!-- Nav Links -->
 					<ul class="hidden md:flex gap-5 text-[.8rem] text-grayishBlue">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Careers</a></li>
+						<li class="hover:border-b-2 hover:border-b-lime-800">
+							<a class="hover:text-primaryLimeGreen" href="#">Home</a>
+						</li>
+						<li class="hover:border-b-2 hover:border-b-lime-800">
+							<a class="hover:text-primaryLimeGreen" href="#">About</a>
+						</li>
+						<li class="hover:border-b-2 hover:border-b-lime-800">
+							<a class="hover:text-primaryLimeGreen" href="#">Contact</a>
+						</li>
+						<li class="hover:border-b-2 hover:border-b-lime-800">
+							<a class="hover:text-primaryLimeGreen" href="#">Blog</a>
+						</li>
+						<li class="hover:border-b-2 hover:border-b-lime-800">
+							<a class="hover:text-primaryLimeGreen" href="#">Careers</a>
+						</li>
 					</ul>
-					<button class="btn-primary">Request Invite</button>
+					<button class="hidden md:inline-flex btn-primary">
+						Request Invite
+					</button>
 				</div>
+				<!-- ham -->
+				<div
+					data-close
+					class="z-20 block md:hidden ham absolute right-7 top-3 hide"
+				>
+					<img
+						src="assets/images/icon-close.svg"
+						class="object-contain"
+						alt=""
+					/>
+				</div>
+				<div
+					data-ham-burger
+					class="z-20 block md:hidden ham absolute right-7 top-4"
+				>
+					<img
+						src="assets/images/icon-hamburger.svg"
+						class="object-contain"
+						alt=""
+					/>
+				</div>
+				<!-- Mob Nav -->
 			</nav>
+		</div>
+		<!-- mob-nav -->
+		<div
+			data-mob-nav-container
+			id="dark-bg"
+			class="transition-all duration-200 ease-linear flex md:hidden inset-0 absolute bg-[rgba(0,0,0,.5)] hide"
+		>
+			<div
+				class="bg-white fixed top-20 flex flex-col right-1/2 translate-x-1/2 rounded-lg text-black px-20 py-10 space-y-4"
+			>
+				<a class="hover:text-lime-600" href="">Home</a
+				><a class="hover:text-lime-600" href="">About</a
+				><a class="hover:text-lime-600" href="">Contact</a
+				><a class="hover:text-lime-600" href="">Blog</a
+				><a class="hover:text-lime-600" href="">Careers</a>
+			</div>
 		</div>
 		<!-- Navbar End -->
 		<!-- Floating -->
@@ -67,7 +120,7 @@
 			class="h-[400px] md:flex-row flex-col flex justify-start items-center container mx-auto md:py-4"
 		>
 			<!--  -->
-			<div class="">
+			<div class="px-7 md:px-0">
 				<h1 class="text-2xl">
 					Next generation <br />
 					digital banking
@@ -179,107 +232,108 @@
 			<div class="mx-auto container">
 				<h2 class="text-2xl md:text-left text-center">Latest Articles</h2>
 
+				<!--  -->
+				<!-- Container -->
 				<div
-					class="flex md:gap-2 gap-5 flex-col md:flex-row mt-7 md:items-start items-stretch md:justify-between"
+					class="md:flex mt-7 md:gap-7 md:space-y-0 sm:space-y-4 sm:px-10 md:px-0"
 				>
 					<!--  -->
-					<div class="md:w-60 overflow-hidden rounded-sm bg-white shadow-sm">
-						<div class="w-full h-56 overflow-hidden rounded-t-md">
+					<div class="md:max-w-[217px] shadow-lg overflow-hidden rounded">
+						<div class="h-36">
 							<img
-								class="object-cover w-full h-full"
+								class="w-full h-full object-cover"
 								src="assets/images/image-currency.jpg"
 								alt=""
 							/>
 						</div>
-						<div class="p-4">
-							<span class="text-[.5rem] text-grayishBlue"
+
+						<div class="p-5">
+							<span class="text-[.7rem] text-grayishBlue"
 								>By Claire Robinson</span
 							>
-							<h4 class="block max-w-[20ch]">
+							<h3 class="font-bold pb-3">
 								Receive money in any currency with no fees
-							</h4>
-							<p class="pt-3 text-xs text-grayishBlue">
+							</h3>
+							<p class="text-xs text-grayishBlue">
 								The world is getting smaller and we’re becoming more mobile. So
 								why should you be forced to only receive money in a single …
 							</p>
 						</div>
 					</div>
-
-					<div
-						class="h-full md:w-60 overflow-hidden rounded-sm bg-white shadow-sm"
-					>
-						<div class="w-full h-56 overflow-hidden rounded-t-md">
+					<!--  -->
+					<!--  -->
+					<div class="md:max-w-[217px] shadow-lg overflow-hidden rounded">
+						<div class="h-36">
 							<img
-								class="object-cover w-full h-full"
+								class="w-full h-full object-cover"
 								src="assets/images/image-restaurant.jpg"
 								alt=""
 							/>
 						</div>
-						<div class="p-4">
-							<span class="text-[.5rem] text-grayishBlue"
-								>By Wilson Hutton</span
+
+						<div class="p-5">
+							<span class="text-[.7rem] text-grayishBlue"
+								>By Wilson Huston</span
 							>
-							<h4 class="block max-w-[20ch]">
+							<h3 class="font-bold pb-3">
 								Treat yourself without worrying about money
-							</h4>
-							<p class="pt-3 text-xs text-grayishBlue">
-								The world is getting smaller and we&lsquo;re becoming more
-								mobile. So why should you be forced to only receive money in a
-								single …
+							</h3>
+							<p class="text-xs text-grayishBlue">
+								Our simple budgeting feature allows you to separate out your
+								spending and set realistic limits each month. That means you …
 							</p>
 						</div>
 					</div>
-
-					<div
-						class="md:min-h-full md:w-60 overflow-hidden rounded-sm bg-white shadow-sm"
-					>
-						<div class="w-full h-56 overflow-hidden rounded-t-md">
+					<!--  -->
+					<!--  -->
+					<div class="md:max-w-[217px] shadow-lg overflow-hidden rounded">
+						<div class="h-36">
 							<img
-								class="object-cover w-full h-full"
+								class="w-full h-full object-cover"
 								src="assets/images/image-plane.jpg"
 								alt=""
 							/>
 						</div>
-						<div class="p-4">
-							<span class="text-[.5rem] text-grayishBlue"
-								>By Wilson Hutton</span
+
+						<div class="p-5">
+							<span class="text-[.7rem] text-grayishBlue"
+								>By Wilson Huston</span
 							>
-							<h4 class="block max-w-[20ch]">
+							<h3 class="font-bold pb-3">
 								Take your Easybank card wherever you go
-							</h4>
-							<p class="pt-3 text-xs text-grayishBlue">
+							</h3>
+							<p class="text-xs text-grayishBlue">
 								We want you to enjoy your travels. This is why we don&lsquo;t
 								charge any fees on purchases while you&lsquo;re abroad.
 								We&lsquo;ll even show you …
 							</p>
 						</div>
 					</div>
-
-					<div
-						class="md:min-h-full md:w-60 overflow-hidden rounded-sm bg-white shadow-sm"
-					>
-						<div class="w-full h-56 overflow-hidden rounded-t-md">
+					<!--  -->
+					<!--  -->
+					<div class="md:max-w-[217px] shadow-lg overflow-hidden rounded">
+						<div class="h-36">
 							<img
-								class="object-cover w-full h-full"
+								class="w-full h-full object-cover"
 								src="assets/images/image-confetti.jpg"
 								alt=""
 							/>
 						</div>
-						<div class="p-4">
-							<span class="text-[.5rem] text-grayishBlue"
+
+						<div class="p-5">
+							<span class="text-[.7rem] text-grayishBlue"
 								>By Claire Robinson</span
 							>
-							<h4 class="block max-w-[20ch]">
-								Our invite-only Beta accounts are live!
-							</h4>
-							<p class="pt-3 text-xs text-grayishBlue">
-								We want you to enjoy your travels. This is why we don&lsquo;t
-								charge any fees on purchases while you&lsquo;re abroad.
-								We&lsquo;ll even show you …
+							<h3 class="font-bold pb-3">
+								Our Invite-only Beta accounts are now live!
+							</h3>
+							<p class="text-xs text-grayishBlue">
+								Our invite-only Beta accounts are now live! After a lot of hard
+								work by the whole team, we&lsquo;re excited to launch our closed
+								beta. It&lsquo;s easy to request an invite through the site ..
 							</p>
 						</div>
 					</div>
-
 					<!--  -->
 				</div>
 			</div>
